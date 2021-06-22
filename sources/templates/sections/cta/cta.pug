@@ -1,0 +1,20 @@
+mixin cta({cta, contact} = data)
+    section.section.cta(id=cta.id)
+        .container.cta__container
+            .cta__wrapper
+                .cta__content-wrapper
+                    .section__header
+                        span.section__lead #{cta.lead}
+                        h2.section__heading.testimonials__heading !{cta.heading}
+                        p.section__subheading.features__subheading !{cta.subheading}
+                    .section__body
+                        .cta__text-wrapper
+                            .cta__buttons-wrapper
+                                +link({prefix: 'tel', attrs: {href: contact.phones[0].number, class: 'btn btn--primary btn--icon btn--rounded', title:contact.phones[0].title}})
+                                    +iconsvg({id: '#icon-mobile-alt', size: 'is-small'})
+                                    span.btn__text #{contact.phones[0].number}
+                                +link({prefix: 'mailto', attrs: {href: contact.mails[0].address, class: 'btn btn--light btn--icon btn--rounded', title:contact.mails[0].title}})
+                                    +iconsvg({id: '#icon-envelope', size: 'is-small'})
+                                    span.btn__text.js-email
+                .cta__illustration-wrapper
+                        +picture(cta.picture)

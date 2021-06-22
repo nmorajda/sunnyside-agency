@@ -1,0 +1,48 @@
+.price {
+  position: relative;
+
+  &-wrapper {
+      overflow-x: auto;
+  }
+
+  &__text {
+    color: $light;
+  }
+
+  .about__text-wrapper {
+    margin-bottom: 6rem;
+  }
+
+  &-heading {
+    position: relative;
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+
+  &-description {
+      margin-bottom: 2em;
+      font-size: 1.8rem;
+      line-height: 2;
+      color: $grey-700;
+  }
+
+  &-caption {
+    color: $grey;
+  }
+
+  &-warning {
+    display: inline-block;
+    margin-right: .5em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: $warning
+  }
+
+  .table {
+    caption {
+      line-height: 2;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.cta__article
+    .cta__article-invitation
+        img(src=pathToFile+'images/team/urszula-tecza.jpg', alt="Urszula Tęcza")
+        p.cta__article-text Wszystkimi sprawami formalnymi i organizacyjnymi, związanymi z założeniem i prowadzeniem firmy w Niemczech, zajmuje się Neutron Consulting UG (hb).
+    .cta__contact
+        p
+        | Zapraszamy do kontaktu:
+        each phone in data.html.contact.phones 
+            +link({prefix: 'tel', attrs: {href: phone.number, class: "btn btn--link btn--icon"}})
+                +iconsvg({id: '#icon-mobile-alt', size: 'is-small'})
+                | #{phone.number}
+        each email in data.html.contact.mails 
+            +link({prefix: 'mailto', attrs: {href: email.address, class: "btn btn--secondary btn--icon btn--rounded"}})
+                +iconsvg({id: '#icon-envelope', size: 'is-small'})
+                span.js-email
+        
+    p.cta__note Treści zamieszczone na stronach www.neutron-consulting.pl mają charakter wyłącznie informacyjny i zostały przygotowane z największą starannością - jednak za kompletność i aktualność treści nie możemy brać odpowiedzialności.

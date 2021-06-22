@@ -1,0 +1,35 @@
+.cta {
+    position: relative;
+
+    &__wrapper {
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__content-wrapper {
+        @include breakpoint(md) {
+            // width: 47%;
+            .section__header {
+                width: 100%;
+                align-items: initial;
+                text-align: left;
+            }
+        }
+    }
+
+    .cta__illustration-wrapper {
+        @include breakpoint(md) {
+            width: 47%;
+        }
+    }
+
+    .cta__buttons-wrapper {
+        .btn {
+            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dotted $grey;
+  outline-offset: 2px;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin: -80px 0 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font-family-primary;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-regular;
+  text-align: center;
+  background-color: $body-background-color;
+
+
+  @include breakpoint(md) {
+      text-align: left;
+  }
+}
+
+/* Images */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $gap;
+
+  &.is-fluid {
+    padding: 0;
+    max-width: 100%;
+  }
+}

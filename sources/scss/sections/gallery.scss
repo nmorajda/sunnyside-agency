@@ -1,0 +1,14 @@
+.gallery {
+    &__items {
+        line-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        &>* {
+            flex: 1 1 50%;
+
+            @include breakpoint(md) {
+                flex: 1 1 25%
+            }
+        }
+    }
+}

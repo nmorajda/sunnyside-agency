@@ -1,0 +1,57 @@
+.table {
+    width: 100%; 
+    min-width: 800px;
+    text-align: center;
+    font-size: 1.3rem;
+    background: $white;
+    border-collapse: collapse;
+    caption-side: bottom;
+    color: $dark;
+
+    &-wrapper {
+        overflow-x: auto;
+    }
+
+    .w--25 {
+        width: 25%;
+    }
+
+
+    tr,
+    tbody th {
+        &:nth-child(even) {
+            background-color: $light;
+        }
+    }
+
+    th, td {
+        border: 1px solid $grey-800;
+    }
+
+    caption {
+        margin: 2em 0;
+        text-align: left;
+    }
+
+    thead {
+        th {
+            padding: 1em;
+            background: $dark;
+            color: $light;
+            border-color: $grey-700
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                cursor: pointer;
+                background-color: $grey-400;
+            }
+        }
+        th {
+            padding: 1em;
+            color: $secondary;
+        }
+    }
+}

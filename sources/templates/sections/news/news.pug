@@ -1,0 +1,12 @@
+
+include ../../elements/blog/post
+mixin news({news})
+    section.news(id=news.id)
+        .container
+            .section__header
+                span.section__lead #{news.lead}
+                h2.section__heading !{news.heading} 
+                p.section__subheading !{news.subheading}
+            .section__body
+                each data in news.items
+                    +post(data)

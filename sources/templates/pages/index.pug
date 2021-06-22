@@ -1,0 +1,15 @@
+extends ../base
+
+include ../sections/hero/hero
+include ../sections/services/services
+include ../sections/testimonials/testimonials
+include ../sections/gallery/gallery
+
+block variables
+    - 
+        let activePage = data.chunks;
+block content
+    +hero(locals.data.html)
+    +services(locals.data.html)
+    +testimonials(locals.data.html)
+    +gallery(locals.data.html)

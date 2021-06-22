@@ -1,0 +1,35 @@
+mixin features({ features } = data)
+    - 
+        const items = [...features.items];
+        const half = Math.ceil(items.length / 2);
+        const firstHalf = items.splice(0, half);
+        const secondHalf = items.splice(-half);
+
+    section.section.features(id=features.id)
+        .container.features__container
+            .section__header
+                span.section__lead #{features.lead}
+                h2.section__heading.features__heading !{features.heading}
+                p.section__subheading.features__subheading #{features.subheading}
+            .section__body
+                .features__items
+                    .features__items__start
+                        each feature, index in firstHalf 
+                            .feature__item-wrapper
+                                .feature__icon-wrapper 
+                                    +iconsvg({id: feature.icon, size: 'is-large'})
+                                .feature__text-wrapper
+                                    h3.feature__heading #{feature.heading}
+                                    p.feature__text #{feature.text}
+
+                    .features__items__illustration
+                        +img(features.illustration)
+
+                    .features__items__end
+                        each feature, index in secondHalf 
+                            .feature__item-wrapper
+                                .feature__icon-wrapper 
+                                    +iconsvg({id: feature.icon, size: 'is-large'})
+                                .feature__text-wrapper
+                                    h3.feature__heading #{feature.heading}
+                                    p.feature__text #{feature.text}

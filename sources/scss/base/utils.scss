@@ -1,0 +1,158 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;  
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+  
+.w {
+    &--50 {
+        width: 50%;
+    }
+
+    &--65 {
+        width: 65%;
+    }
+    &--75 {
+        width: 75%;
+    }
+}
+
+.mx {
+    &--auto {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.mt {
+    &--12 {
+        margin-top: 12rem;
+    }
+}
+
+.display {
+    &--none {
+        display: none !important;
+    }
+
+    &--flex {
+        display: flex;
+    }
+
+    &--sm {
+        display: block !important;
+
+        @include breakpoint(md) {
+            display: none !important;
+        }
+    }
+
+    &--md {
+        display: none !important;
+
+        @include breakpoint(md) {
+            display: block !important;
+        }
+    }
+}
+
+.is-hidden {
+    visibility: hidden !important;
+}
+
+.flex {
+    display: flex;
+
+    &-jc {
+        &--start {
+            justify-content: flex-start;
+        }
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &-ai {
+        &--start {
+            align-items: flex-start;
+        }
+
+        &--center {
+            align-items: center;
+        }
+    }
+}
+
+.text {
+    &--color-primary {
+        color: $primary !important;
+    }
+
+    &--color-secondary {
+        color: $secondary !important;
+    }
+
+    &--decoration-underline {
+        text-decoration: underline;
+    }
+
+    &--align-center {
+        text-align: center;
+    }
+}
+
+.img {
+    &--circle {
+        border-radius: 50%;
+    }
+}
+
+.warning {
+    color: $warning;
+}
+
+.color {
+    &--primary {
+        color: $primary !important;
+    }
+
+    &--secondary {
+        color: $secondary !important;
+    }
+
+    &--dark {
+        color: $dark !important;
+    }
+
+    &--light {
+        color: $light !important;
+    }
+}
+
+.bg {
+    &--primary {
+        background-color: $primary !important;
+    }
+
+    &--secondary {
+        background-color: $secondary !important;
+    }
+
+    &--dark {
+        background-color: $dark !important;
+    }
+
+    &--light {
+        background-color: $light !important;
+    }
+}

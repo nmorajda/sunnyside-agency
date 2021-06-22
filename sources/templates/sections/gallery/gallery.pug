@@ -1,0 +1,7 @@
+mixin gallery({ gallery })
+    div#gallery.gallery
+        .container.is-fluid
+            .gallery__wrapper
+                .gallery__items
+                    each item in gallery.items
+                        +picture(item.picture)

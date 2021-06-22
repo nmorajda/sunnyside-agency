@@ -1,0 +1,11 @@
+mixin img(options={})
+    - 
+        const defaults = {}
+        const settings = Object.assign({}, defaults, options)
+        const attrs = {...settings.attrs}
+
+        if (settings.attrs.src.indexOf('http') !== 0) {
+            attrs.src = pathToFile+settings.attrs.src
+        }
+        
+    img&attributes(attrs)

@@ -1,0 +1,47 @@
+mixin contact({ contact } = data)
+
+    section.section.contact(id=contact.id)
+        .container.contact__container
+            .section__header
+                span.section__lead Neutron Consulting UG (hb) 
+                h2.section__heading.contact__heading Adres i dane <span class="text--color-secondary">kontaktowe</span>
+                p.section__subheading.contact__subheading  Neutron Consulting UG (hb) świadczy najwyższą jakość usług z zakresu obsługi firm w Niemczech – pomoc w założeniu firmy w Niemczech wraz z pełnym serwisem biurowym i biznesowym.
+            .section__body
+               .row.flex-ai--start
+                    .column 
+                        .contact__info-wrapper 
+                            .contact__info-phones
+                                h3.contact__heading Numery telefonów
+                                each phone in contact.phones 
+                                    +link({prefix: 'tel', attrs: {href: phone.number, class: "btn btn--link btn--icon"}})
+                                        +iconsvg({id: '#icon-mobile-alt', size: 'is-small'})
+                                        | #{phone.number}
+                            .contact__info-emails
+                                h3.contact__heading Adresy email
+                                each email in contact.mails 
+                                    +link({prefix: 'mailto', attrs: {href: email.address, class: "btn btn--link btn--icon"}})
+                                        +iconsvg({id: '#icon-envelope', size: 'is-small'})
+                                        span.js-email
+                            .contact__info-websites
+                                h3.contact__heading Adresy internetowe
+                                each website in contact.websites 
+                                    +link({attrs: {href: website.href, class: "btn btn--link btn--icon"}})
+                                        +iconsvg({id: '#globe-europe', size: 'is-small'})
+                                        | #{website.text}
+                    .column
+                        .contact__address-wrapper 
+                            h3.contact__heading Adres
+                            address
+                                strong Neutron Consulting Unternehmergesellschaft
+                                br
+                                | (haftungsbeschränkt)
+                                br
+                                | #{contact.street}
+                                br
+                                | #{contact.city}
+                                br
+                        .contact__note-wrapper
+                            .contact__note-image-wrapper
+                                img(src=pathToFile+'images/team/urszula-tecza.jpg', alt="Urszula Tęcza")
+                            each item in contact.note 
+                                p #{item}

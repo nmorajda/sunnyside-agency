@@ -1,0 +1,4 @@
+mixin socials(socials, size='is-medium')
+    each social in socials
+        +link({attrs: {href: social.href}})
+            +iconsvg({id: social.id, size: size})

@@ -1,0 +1,184 @@
+.header__nav {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+    }
+    
+    &__item {
+        width: 100%;
+        height: 100%;
+        max-width: 26rem;
+        &:not(:last-child) {
+            margin-bottom: $header-link-margin;
+        }
+        // padding: 1rem 0;
+
+        @include breakpoint(md) {
+            width: initial;
+            max-width: initial;
+            margin: 0 $header-md-link-margin !important;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        &.has-dropdown {
+            position: relative;
+    
+            @include breakpoint(md) {
+                left: 0;
+                margin-bottom: 0;
+                padding: 0;
+                border: 0;
+            }
+    
+            > a {
+                position: relative;
+                padding-right: 2rem;
+    
+                @include breakpoint(md) {
+                    margin-bottom: 0;
+                }
+    
+                &:after {
+                    @extend .shape-arrow;
+                    @extend .shape-arrow--down;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-100%) rotate(45deg);
+                }
+            }
+    
+            .header__nav__dropdown__wrapper {
+                @include breakpoint(md) {
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                }
+            }
+    
+            .header__nav__dropdown {
+                display: none;
+                max-width: 28rem;
+                padding: 1rem 0;
+                background-color: $dropdown-mobile-background-color;
+                border-radius: $dropdown-border-radius;
+
+                @include breakpoint(md) {
+                    max-width: initial;
+                    min-width:23rem;
+                    margin: 0;
+                    margin-left: -2rem;
+                    padding: 1.5rem 3rem;
+                    background-color: $dropdown-background-color;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    box-shadow: $dropdown-box-shadow;
+                }
+    
+                // dropdown links
+                a {
+                    position: relative;
+                    display: block;
+                    margin: 2rem 0;
+                    letter-spacing: .5px;
+                    font-family: $dropdown-link-font-family;
+                    font-weight: $dropdown-link-font-weight;
+                    font-size: 1.5rem;
+                    color: currentColor;
+    
+                    @include breakpoint(md) {
+                        margin: 1.5rem 0;
+
+                        &:hover {
+                            color: $dropdown-link-hover-color;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: -20px;
+                            width: 10px;
+                            height: 2px;
+                            opacity: 0;
+                            background-color: $header-link-color;
+                            transition: all 0.3s linear;
+                        }
+    
+                        &:hover {
+                            &:before {
+                                opacity: 1;
+                                left: -15px;
+                            }
+                        }                        
+                    }
+                }
+            }
+    
+            // dropdown menu click open only mobile
+            @media (max-width: 799px) {
+                &.is-active {
+                    > a {
+                        margin-bottom: 1.5rem;
+                        &:after {
+                            transform: translateY(-50%) rotate(225deg)
+                        }
+                    }
+    
+                    .header__nav__dropdown {
+                        display: block;
+                    }
+                }
+            }
+    
+            // dropdown menu hover open only desktop
+            @include breakpoint(md) {
+                &:focus-within,
+                &:hover {
+                    > a {
+                        color: $dark;
+                        &:after {
+                            transform: translateY(-50%) rotate(225deg)
+                        }
+                    }
+                    
+                    .header__nav__dropdown {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+    &__link {
+        @extend .cool-link;
+        display: inline-block;
+        font-size: $header-mobile-link-font-size;
+        font-family: $header-link-font-family;
+        font-weight: $header-link-font-weight;
+        color: $header-mobile-link-color;
+    
+        @include breakpoint(md) {
+            font-weight: $header-md-link-font-weight;
+            letter-spacing: initial;
+            color: currentColor;
+    
+            &:hover,
+            &:focus {
+                color: $header-link-hover-color !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+mixin services({services} = data)
+    div.services(id=services.id)
+        .container.is-fluid.services__container
+            .services__wrapper
+                each item in services.items
+                    div.service__item(class=item.style)
+                        .service__img-wrapper
+                            +picture(item.picture)
+                        .service__text-wrapper
+                            .service__text-content
+                                h2.heading.service__heading #{item.title}
+                                p.service__text #{item.text}
+                                +link(item.button)
+                                    | #{item.button.text}

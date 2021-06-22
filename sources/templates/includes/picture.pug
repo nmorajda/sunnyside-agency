@@ -1,0 +1,40 @@
+mixin picture(picture, options={})
+    -
+        const defaults = {
+            lazy: true
+        }
+
+        const settings = Object.assign({}, defaults, options);
+
+        const fileInfo = (fileName) => {
+            if (!fileName) return;
+            
+            return {
+                name: fileName.substring(0, fileName.lastIndexOf('.')) || fileName,
+                ext: fileName.split('.').pop()
+            }
+        }
+
+        const sources = picture.sources.map(source => {
+            const file = fileInfo(source.srcset);
+
+            const media = source.media;
+            const srcset = pathToFile + source.srcset;
+            const type = `image/${file.ext}`;
+
+            return settings.lazy ? {
+                media, 'data-srcset':srcset, type
+                
+            } : {
+                media, srcset, type
+            }
+            
+
+        })
+    picture
+        each source in sources
+            source&attributes(source)
+        if settings.lazy
+            img.lazy(data-src=pathToFile + picture.img.attrs.src alt=picture.img.attrs.alt class=picture.img.attrs.class)
+        else
+            img(src=pathToFile + picture.img.attrs.src alt=picture.img.attrs.alt class=picture.img.attrs.class) 

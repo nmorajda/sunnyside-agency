@@ -1,0 +1,124 @@
+.features {
+    // ponieważ pozycje maja własny dolny margines i dopełnienie
+    // to nadpisuje padding-bootom z sekcji
+    padding-bottom: 1rem;
+    &:before {
+        @include breakpoint(md) {
+            z-index:-1;
+            content: '';
+            position: absolute;
+            bottom: calc(50% - 500px);
+            left: 50%;
+            transform: translateX(-10%);
+            width: 814px;
+            height: 814px;
+            background-color: $body-background-color;
+            background-image: url(../images/shapes/shape-3.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+
+    
+    &__container {
+
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+
+
+        &__start,
+        &__end {
+            @include breakpoint(md) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        &__illustration {
+            width: 100%;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint(md) {
+                // width: 100%;
+            }
+
+            img {
+                width: 100%;
+                max-width: 44.9rem;
+                height: auto;
+            }
+        }
+    }
+
+
+    .feature {
+        &__item-wrapper {
+            margin: 3rem 0;
+            padding: 3rem 0;
+
+            @include breakpoint(md) {
+                // min-height: 26rem;
+                text-align: left;
+                width: 47%;
+                display: flex;
+
+            }
+        }
+
+        &__icon-wrapper {
+            margin-bottom: 3rem;
+            color: $secondary-300;
+            @include breakpoint(sm) {
+                margin: 0;
+                margin-right: 3rem;
+            }
+
+            .icon {
+                width: 12rem;
+                height: 12rem;
+
+                @include breakpoint(md) {
+                    width: 8rem;
+                    height: 8rem;
+                }
+
+                @include breakpoint(md) {
+                    width: 10rem;
+                    height: 10rem;
+                }                
+            }
+        }
+
+        &__text-wrapper {
+
+        }
+
+        &__heading {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: $font-weight-semi-bold;
+            @include breakpoint(md) {
+                font-size: 2.4rem;
+            }
+
+        }
+
+        &__text {
+            color: $grey;
+            line-height: 2;
+
+            @include breakpoint(md) {
+
+            }
+        }
+    }
+
+
+}

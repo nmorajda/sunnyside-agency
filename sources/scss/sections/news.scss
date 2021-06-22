@@ -1,0 +1,22 @@
+.news {
+    .section__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > * {
+            margin: $gap 0;
+        }
+
+        .post {
+            @include breakpoint(600px) {
+                max-width: 47%;    
+            }
+        
+            @include breakpoint(md) {
+                max-width: 30%;    
+            }  
+        }
+        
+    }
+}

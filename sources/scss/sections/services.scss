@@ -1,0 +1,131 @@
+.services {
+    &__wrapper {
+        @include breakpoint(md) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .service {
+        &__item {
+            &:nth-child(-n+2) {
+                width: 100%;
+
+                @include breakpoint(md) {
+                    display: flex;
+
+                    &>* {
+                        flex: 1 1 50%;
+                    }
+
+                    &:nth-child(odd) {
+                        .service__text-wrapper {
+                            order: -1;
+                        }
+                    }
+
+                    .service__heading {
+                        @include breakpoint(md) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            // the last two elements
+            &:nth-last-child(-n+2) {
+                position: relative;
+                
+                @include breakpoint(md) {
+                    width: 50%;
+                }
+
+                .service__text-wrapper {
+                    position: absolute;
+                    bottom: $gap;
+                    left: 0;
+                    width: 100%;
+                    padding: 1.5rem;
+                    text-align: center;
+                    
+                }
+
+                .service__text-content {
+                    padding: 1.5rem;
+                    @include breakpoint(md) {
+                        
+                        max-width: 40rem;
+                    }
+                }
+
+                .service__heading {
+                    font-size: 2.8rem;
+                    @include breakpoint(md) {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                .service__text {
+                    margin: 0;
+                }
+
+                .btn {
+                    display: none;
+                }
+            }
+
+        }
+
+        &__text-wrapper {
+            padding: $gap*2 $gap;
+
+            @include breakpoint(md) {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__text-content {
+            @include breakpoint(md) {
+                padding: $gap;
+                max-width: 48rem;
+            }
+        }
+
+        &__heading {
+
+            margin: 0 auto $gap;
+            font-size: 3.2rem;
+            font-weight: $font-weight-extra-bold;
+
+            @include breakpoint(md) {
+                font-size: 3.6rem;
+            }
+        }
+
+        &__text {
+            margin-bottom: $gap;
+            line-height: 1.6;
+        }
+
+
+    }
+
+    .service--red {
+        .btn {
+            &:after {
+                background-color: $red;
+            }
+        }
+    }
+
+    .service--green {
+        color: $dark-desaturated-cyan;
+    }
+
+    .service--blue {
+        color: $dark-blue;
+    }
+}

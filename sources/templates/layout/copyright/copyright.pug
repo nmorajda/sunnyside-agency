@@ -1,0 +1,10 @@
+mixin copyright({copyright} = data)
+    .copyright 
+        .container
+            ul.copyright__list
+                each item in copyright
+                    li.copyright__item
+                        | !{item}
+                li.copyright__item 
+                    | Last update: 
+                    time #{locals.createDate}

@@ -1,0 +1,11 @@
+.topbar {
+    background-color: $topbar-background-color;
+    color: $topbar-color;
+
+    &__container {
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

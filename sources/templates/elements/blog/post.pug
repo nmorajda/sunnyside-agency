@@ -1,0 +1,15 @@
+mixin post(post)
+    .post
+        .post__img 
+            a(href="#") 
+                +img({attrs: {src: 'images/articles/'+post.img}})
+        .post__body
+            .post__meta 
+                span.post__meta-cat #{post.category}
+                div
+                    span.post__meta-date #{post.created}
+                    a.post__meta-author(href="#") #{post.author}
+            h3.post__title #{post.title}
+            p.post__desc #{post.desc}
+            a.btn.btn--dark.btn--rounded(href="#")
+                | Read more

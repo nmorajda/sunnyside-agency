@@ -1,0 +1,7 @@
+mixin hero({ hero } = data)
+    section.hero
+        .container.hero__container
+            .hero__text__wrapper
+                h1.hero__heading !{hero.heading}
+                +link({attrs: {href: "#services"}})
+                    +img(hero.picture.img)

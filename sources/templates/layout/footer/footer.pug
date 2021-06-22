@@ -1,0 +1,15 @@
+include ../../elements/socials/socials
+mixin footer({brand, footer, socials, contact} = data)
+    footer.footer
+        .container.footer__container
+            .footer__wrapper
+                .footer__logo 
+                    +link({attrs: {href: '#'}})
+                        +iconsvg({id: '#icon-logo'})
+                .footer__menu 
+                    each item in footer.menu.items 
+                        +link({attrs: {href: item.attrs.href, class: "footer__menu__link"}})
+                            | #{item.anchor}
+                .footer__socials
+                    +socials(socials)
+

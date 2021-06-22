@@ -1,0 +1,64 @@
+$desktop: 1024px;
+.cookie-info {
+  position: fixed;
+  bottom: $gap;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 32rem;
+  padding: 3rem;
+  color:$grey;
+  background: $light;
+  border-radius: 1rem;
+  box-shadow: 0 0 13px 3px rgba(0, 0, 0, .1);
+  z-index: 999;
+
+  @include breakpoint(md) {
+    left: $gap;
+    bottom: $gap;
+    transform: translateX(0);
+  }
+
+
+  &__content {
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: .8em;
+    text-align: left;
+  }
+
+  &__close {
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2rem;
+      height: 3px;
+      background-color: $white;
+    }
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &:after {
+      transform: rotate(-135deg);
+    }
+  }
+}

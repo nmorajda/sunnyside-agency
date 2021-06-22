@@ -1,0 +1,70 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btns {
+        display: none;
+        @include breakpoint(md) {
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+    }
+
+    // buttons
+    [data-filter] {
+        padding: 1rem 3rem;
+        margin-bottom: 2rem;
+        font-size: 1.2em;
+        cursor: pointer;
+        background: #f5f5f5;
+        border: 0;
+
+        &.is-active,
+        &:hover,
+        &:focus {
+            color: white;
+            background: lightskyblue;
+        }
+    }
+}
+
+/*  Needed for animations */
+.hide { 
+    /* You can play with the seconds to change the "animation" */
+    animation: hide .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+    
+}
+
+.show { 
+    /* You can play with the seconds to change the "animation" */
+    animation: show .5s ease 0s 1 normal forwards;    
+    transform-origin: center;
+}
+  
+@keyframes hide {
+    0%{
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+}
+@keyframes show {
+    0%{
+        transform: scale(0);
+        width: 0;
+        height: 0;
+        margin: 0;
+
+    }
+    100% {
+        transform: scale(1);
+    }
+}

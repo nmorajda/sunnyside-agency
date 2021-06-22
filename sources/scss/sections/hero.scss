@@ -1,0 +1,59 @@
+.hero {
+    position: relative;
+    overflow-x: hidden;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-color: #3ebfff;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+
+    @include breakpoint(md) {
+        background-image: url(../images/desktop/image-header.jpg);
+
+    }
+
+    @include breakpoint(lg) {
+        background-size: 140rem;
+    }
+
+    &__text__wrapper {
+        min-height: 52rem;
+        color: $white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(md) {
+            min-height: 78rem;
+        }
+    }
+
+    &__heading {
+        width: 32rem;
+        text-align: center;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        letter-spacing: .3ch;
+        font-weight: $font-weight-extra-bold;
+
+        @include breakpoint(md) {
+            width: 100%;
+            margin-top: -10rem;
+            font-size: 5.4rem
+        }
+    }
+
+    .icon-arrow {
+        margin: 3rem;
+        width: initial;
+        height: 100%;
+
+        @include breakpoint(md) {
+            margin-top: 6rem;
+        }
+        
+    }
+}

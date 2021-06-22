@@ -1,0 +1,24 @@
+mixin about({ about } = data)
+    section.section.about
+        .container.about__container
+            .section__header
+                span.section__lead #{about.lead}
+                h2.section__heading.about__heading !{about.heading}
+                p.section__subheading.features__subheading #{about.subheading}
+            .section__body
+                .about__wrapper
+                    .about__image-wrapper
+                        +picture(about.picture)
+                    .about__text-wrapper
+                        p !{about.text}
+                h3.about__subheading #{about.features.title}
+                .about__wrapper
+                    .about__text-wrapper
+                        ul.about__list
+                            each item in about.features.items
+                                li.about-item
+                                    +iconsvg({id: '#icon-angle-double-right', size: 'is-xsmall'})
+                                    | #{item}
+                .about__wrapper
+                    .about__text-wrapper
+                        p.about__note !{about.note}

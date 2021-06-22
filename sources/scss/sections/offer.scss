@@ -1,0 +1,27 @@
+.offer {
+    .list {
+        text-align: left;
+        margin-bottom: 6rem;
+
+        @include breakpoint(md) {
+            column-count: 2;
+            column-gap: 3rem;    
+        }
+
+        @include breakpoint(lg) {
+            column-gap: 6rem;
+        }
+    }
+
+    &-note-heading {
+        margin-bottom: 1.5rem;
+        text-decoration: underline;
+    }
+
+    &-note-list {
+        li {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+    }
+}

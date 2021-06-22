@@ -1,0 +1,54 @@
+.about {
+    &__wrapper {
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
+
+    &__image-wrapper {
+        flex: 1;
+    }
+
+    &__text-wrapper {
+        flex: 1;
+        font-size: 1.8rem;
+        line-height: 2;
+        color: $grey;
+
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        strong {
+            color: $light;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 1rem;
+            color: $secondary;
+        }
+    }
+
+    &__subheading {
+        color: $light;
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        text-align: left;
+        @include breakpoint(md) {
+            column-count: 2;
+            column-gap: 6rem;
+        }
+    }
+
+    &__note {
+        margin-top: 3rem;
+        font-weight: $font-weight-bold;
+        color: $light;
+    }
+}

@@ -1,0 +1,33 @@
+.row {
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+    }
+  
+    > * {
+        width: 100%;
+        margin: $gap 0;
+        padding: 0;
+  
+      @include breakpoint(md) {
+            padding: $gap;
+      }
+    }
+  
+    &--multiline {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+}
+  
+.column {
+    @include breakpoint(md) {
+        &-1-3 {
+            width: 75%;
+        }    
+    }
+}

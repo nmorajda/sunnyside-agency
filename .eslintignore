@@ -1,0 +1,5 @@
+.gitignore
+config/
+docs/
+node_modules/
+config/

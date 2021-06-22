@@ -1,0 +1,11 @@
+mixin offer({offer} = data)
+    section.offer(id=offer.id)
+        .container.offer-container
+            .section__header
+                span.section__lead #{offer.lead}
+                h2.section__heading !{offer.heading} 
+                p.section__subheading !{offer.subheading}
+            .section__body
+                ul.list.list--primary
+                    each item in offer.features.items 
+                        li #{item}

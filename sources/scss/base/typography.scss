@@ -1,0 +1,64 @@
+h1, h2, h3, h4 {
+  font-family: $section-heading-font-family;
+  font-weight: $section-heading-font-weight;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* links */
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all .3s ease;
+  &:not(.btn)
+  {
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.list {
+  &--primary {
+        li {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            line-height: 1.8;
+
+            &:before {
+                @extend .shape-check;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: .8rem;
+            }
+        }
+  }
+}
+
+.cool-link {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: currentColor;
+    transition: transform .5s;
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+}

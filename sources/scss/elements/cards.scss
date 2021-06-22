@@ -1,0 +1,11 @@
+.card {
+    margin-bottom: 3rem;
+    background-color: $white;
+    border-radius: .5rem;
+    box-shadow: $box-shadow-primary;
+    overflow: hidden;
+
+    &__body {
+        padding: 3rem $gap;
+    }
+}

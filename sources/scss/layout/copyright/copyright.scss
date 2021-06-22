@@ -1,0 +1,27 @@
+.copyright {
+  padding: 3rem;
+  font-size: 1.3rem;
+  line-height: 2;
+  text-align: center;
+  color: $copyright-text-color;
+  background-color: $copyright-background-color;
+
+  &__item {
+    @include breakpoint(lg) {
+      padding-right: 1rem;
+      display: inline-block;
+    }
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  a {
+    color: $copyright-link-color;
+    
+    &:hover {
+      color: $copyright-link-hover-color;
+    }
+  }
+}

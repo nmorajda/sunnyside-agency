@@ -1,0 +1,354 @@
+{
+  "head": {
+    "html": {
+      "attrs": {
+        "class": "no-js",
+        "lang": "pl",
+        "dir": "ltr"
+      }
+    },
+    "robots": "",
+    "title": "Sunnyside Agency | Norbert Morajda",
+    "description": "Sunnyside Agency.",
+    "fonts": "https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap",
+    "styles": [],
+    "scripts": []
+  },
+
+  "brand": {
+    "lead": "Sunnyside Agency",
+    "link": {
+      "attrs": {
+        "href": "/",
+        "title": "Sunnyside Agency",
+        "class": "logo__link"
+      }
+    },
+    "logo": {
+      "id": "#icon-logo"
+    }
+  },
+
+  "menu": {
+    "mainMenu": {
+      "items": [
+        {
+          "anchor": "About",
+          "attrs": { "href": "#"}
+        },
+        {
+          "anchor": "Services",
+          "attrs": { "href": "#services"}
+        },        
+        {
+          "anchor": "Projects",
+          "attrs": { "href": "#gallery"}
+        }
+      ],
+      "button": {
+        "text": "Contact",
+        "attrs": { "href": "#", "class": "btn btn--white btn--rounded"}
+      }      
+    }
+  },
+  
+  "hero": {
+    "heading": "We are creatives",
+    "picture": {
+      "img": {
+        "attrs": {
+          "src": "images/icon-arrow-down.svg",
+          "class": "icon-arrow",
+          "alt": "Go to next section"
+        }
+      }
+    }    
+  },
+
+  "services": {
+    "id": "services",
+    "items": [
+      {
+        "style": "service--yellow",
+        "title": "Transform your brand",
+        "text": "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
+        "button": {
+          "text": "Learn more",
+          "attrs": {
+            "href": "#",
+            "class": "btn btn--text"
+          }
+        },
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-transform.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/desktop/image-transform.jpg",
+              "alt": "Egg"
+            }
+          }
+        }
+      },
+      {
+        "style": "service--red",
+        "title": "Stand out to the right audience",
+        "text": "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.",
+        "button": {
+          "text": "Learn more",
+          "attrs": {
+            "href": "#",
+            "class": "btn btn--text"
+          }
+        },
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-stand-out.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-stand-out.jpg",
+              "alt": "Stand out"
+            }
+          }
+        }
+      },
+      {
+        "style": "service--green",
+        "title": "Graphic Design",
+        "text": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
+        "button": {
+          "text": "Learn more",
+          "attrs": {
+            "href": "#",
+            "class": "btn btn--text"
+          }
+        },
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-graphic-design.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-graphic-design.jpg",
+              "alt": "Cherry"
+            }
+          }
+        }
+      },
+      {
+        "style": "service--blue",
+        "title": "Photography",
+        "text": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+        "button": {
+          "text": "Learn more",
+          "attrs": {
+            "href": "#",
+            "class": "btn btn--text"
+          }
+        },
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-photography.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-photography.jpg",
+              "alt": "Cherry"
+            }
+          }
+        }
+      }      
+    ]
+  },
+
+  "testimonials": {
+    "id": "testimonials",
+    "heading": "CLIENT TESTIMONIALS",
+    "items": [
+      {
+        "name": "Emily R.",
+        "role": "Marketing Director",
+        "text": "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+        "img": "images/image-emily.jpg"
+      },
+      {
+        "name": "Thomas S.",
+        "role": "Chief Operating Officer",
+        "text": "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+        "img": "images/image-thomas.jpg"
+      },
+      {
+        "name": "Jennie F.",
+        "role": "Business Owner",
+        "text": "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+        "img": "images/image-jennie.jpg"
+      }
+    ]
+
+  },
+
+  "gallery": {
+    "id": "gallery",
+    "items": [
+      {
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-gallery-milkbottles.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-gallery-milkbottles.jpg",
+              "alt": "Milk boottles"
+            }
+          }
+        }      
+      },
+      {
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-gallery-orange.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-gallery-orange.jpg",
+              "alt": "Orange"
+            }
+          }
+        }      
+      },
+      {
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-gallery-cone.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-gallery-cone.jpg",
+              "alt": "Cone"
+            }
+          }
+        }      
+      },
+      {
+        "picture": {
+          "sources": [
+            {
+              "media": "(min-width: 767px)",
+              "srcset": "images/desktop/image-gallery-sugarcubes.jpg"
+            }
+          ],
+          "img": {
+            "attrs": {
+              "src": "images/mobile/image-gallery-sugarcubes.jpg",
+              "alt": "Sugar cubes"
+            }
+          }
+        }      
+      }       
+    ]
+  },  
+
+  "contact": {
+    "name": "ABM STUDIO",
+    "firm": "ABM STUDIO Norbert Morajda",
+    "street": "ul. Kopernika 22",
+    "city": "33-170 Tuchów",
+    "nip": "PL 8732577306",
+    "regon": "123174986",
+    "phones": [
+      {
+        "number": "(+48) 665 665 025",
+        "title": "Zadzwoń do nas"
+      }
+    ],
+    "mails": [
+      {
+        "address": "biuro@abmstudio.pl",
+        "title": "Napisz do nas"
+      }
+    ],
+    "websites": [
+      {
+        "href": "https://www.abmstudio.pl/",
+        "text": "ABM STUDIO",
+        "title": "Tworzenei stron internetowych"
+      }
+    ]    
+  },
+
+  "socials": [
+    {
+      "name": "Facebook",
+      "href": "https://www.facebook.com",
+      "title": "",
+      "id": "#icon-facebook"
+    },
+    {
+      "name": "Instagram",
+      "href": "https://www.instagram.com",
+      "title": "",
+      "id": "#icon-instagram"
+    },
+    {
+      "name": "Twitter",
+      "href": "https://www.twitter.com",
+      "title": "",
+      "id": "#icon-twitter"
+    },
+    {
+      "name": "Pinterest",
+      "href": "https://www.pinterest.com",
+      "title": "",
+      "id": "#icon-pinterest"
+    }
+  ],
+
+  "footer": {
+    "menu": {
+        "title": "Menu",
+        "items": [
+          {
+            "anchor": "About",
+            "attrs": { "href": "#"}
+          },
+          {
+            "anchor": "Services",
+            "attrs": { "href": "#services"}
+          },        
+          {
+            "anchor": "Projects",
+            "attrs": { "href": "#"}
+          }
+        ]
+    }
+  },
+
+  "copyright": [
+    "Copyright <span class=\"js-year\"></span>",
+    "ABM STUDIO",
+    "Wykonanie <a href=\"https://abmstudio.pl\" target=\"_blank\" title=\"Strony internetowe\" class=\"footer__link\">ABM STUDIO</a>"
+  ]
+}

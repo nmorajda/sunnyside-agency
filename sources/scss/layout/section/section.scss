@@ -1,0 +1,41 @@
+.section {
+    position: relative;
+    padding: 7rem 0;
+
+    @include breakpoint(md) {
+        padding: 9rem 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 12rem 0;
+    }    
+
+    &__header {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(md) {
+            width: 66%;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+            text-align: center;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+        font-size: $section-heading-font-size;
+        font-family: $section-heading-font-family;
+        font-weight: $section-heading-font-weight;
+        line-height: 1.4;
+        letter-spacing: 0.3ch;
+        color: $section-heading-color;
+
+        @media (min-width: $breakpoint)
+        {
+            font-size: 2rem
+        }
+    }
+}

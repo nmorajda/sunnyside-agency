@@ -1,0 +1,196 @@
+button,
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: 0.25px;
+    color: $dark;
+    background-color: transparent;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+
+}
+
+.btn {
+    &--large {
+        font-size: 1.8rem;
+        padding: 1.2rem 3rem;
+    }
+
+    &--rounded {
+        border-radius: 100vw;
+    }
+
+    &--icon {
+        display: inline-flex;
+        align-items: center;
+
+        .icon {
+            margin-right: 1em;
+        }
+    }
+
+    &--primary {
+        color: $light;
+        background: $primary;
+        box-shadow: $button-box-shadow;
+        
+        &:hover {
+            background: $primary-600;
+        }
+    };
+
+    &--secondary {
+        color: $white;
+        background-color: $secondary;
+        border-color: $secondary;
+        box-shadow: $button-box-shadow;
+        
+        &:hover {
+            color: $white;
+            background-color: $secondary-400;
+            border-color: $secondary-400;
+        }
+    };
+
+    &--dark {
+        background-color: $dark;
+        
+        &:hover {
+            color: $light;
+            background-color: $dark;
+        }
+    }
+
+    &--light {
+        color: $dark;
+        background: $grey-300;
+
+        &:hover {
+            color: $light;
+            background-color: $dark;
+        }
+    }
+
+    &--link {
+        color: $link-color;
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+
+    &--transparent {
+        color: $light;
+        border-color: $light;
+        background-color: transparent;
+        &:hover {
+            color: $primary;
+            background-color: $light;
+            border-color: $light;
+        }
+    }
+
+    &--white {
+        color: $dark;
+        background-color: $white;
+
+        &:focus,
+        &:hover {
+            color: $white;
+            background-color: $secondary-500;
+        }
+    }
+
+    &--no-shadow {
+        box-shadow: none !important;
+    }
+
+    &--text {
+        position: relative;
+        padding: .5rem .5rem 0 .5rem;
+        font-weight: $font-weight-extra-bold;
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: $yellow;
+            border-radius: 100vh;
+            opacity: .5;
+        }
+
+        &-yellow {
+
+        }
+
+        &-red {
+            &:after {
+                background-color: $red;
+            }
+        }
+    }
+    
+    &-toggle {
+        position: relative;
+        width: $button-toggle-width;
+        height: $button-toggle-height;
+        background: $button-toggle-background;
+        padding: 0;
+        outline: none;
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            position: absolute;
+            display: block;
+            width: $button-toggle-line-width;
+            height: $button-toggle-line-height;
+            background: $button-toggle-line-color;
+            transition: $button-toggle-line-transition;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: $button-toggle-line-height;
+                background: $button-toggle-line-color;
+                transform: translateY(-$button-toggle-line-spacing);
+                transition: $button-toggle-line-transition;
+            }
+        
+            &:after {
+                transform: translateY($button-toggle-line-spacing);
+            }
+        }
+
+        &--active {
+            span {
+                background: transparent;
+                &:before {
+                    transform: translateY(0px) rotate(45deg);
+                }
+                &:after {
+                    transform: translateY(0px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
