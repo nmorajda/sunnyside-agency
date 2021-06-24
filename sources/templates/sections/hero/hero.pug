@@ -3,5 +3,5 @@ mixin hero({ hero } = data)
         .container.hero__container
             .hero__text__wrapper
                 h1.hero__heading !{hero.heading}
-                +link({attrs: {href: "#services"}})
+                +link({attrs: {href: "#services", class: "hero__link"}})
                     +img(hero.picture.img)

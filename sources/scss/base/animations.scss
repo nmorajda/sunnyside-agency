@@ -1,4 +1,4 @@
-.ken-burns {
+.animation-ken-burns {
     position: relative;
     overflow: hidden;
 }
@@ -38,4 +38,15 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.animation-bounce {
+    animation-name: animation-bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes animation-bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(30px); }
+    100% { transform: translateY(0); }
 }

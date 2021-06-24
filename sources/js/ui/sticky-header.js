@@ -4,7 +4,7 @@ class StickyHeader {
   constructor(options) {
     const defaults = {
       elemSelector: '.header',
-      scrollTop: 160,
+      scrollTop: 120,
     };
 
     this.settings = { ...defaults, ...options };

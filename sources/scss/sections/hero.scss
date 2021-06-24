@@ -18,7 +18,7 @@
     }
 
     &__text__wrapper {
-        min-height: 52rem;
+        min-height: 64vh;
         color: $white;
         text-align: center;
         display: flex;
@@ -27,7 +27,7 @@
         align-items: center;
 
         @include breakpoint(md) {
-            min-height: 78rem;
+            min-height: 100vh;
         }
     }
 
@@ -43,6 +43,15 @@
             width: 100%;
             margin-top: -10rem;
             font-size: 5.4rem
+        }
+    }
+
+    &__link {
+        &:hover {
+            @extend .animation-bounce;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
         }
     }
 
